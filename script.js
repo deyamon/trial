@@ -92,11 +92,11 @@ books.forEach(b => {
 // ← EDIT THIS: add the mp3 filename for each track
 //   Put your mp3 files in a folder called  music/  next to this file
 const tracks = [
-  { title: 'Jogi',          artist: 'Arko ft Aakanksha Sharma',    note: 'This one says it all', file: 'jogi.mp3'          },
-  { title: 'Say My Name',           artist: 'Hozier',      note: 'Every note, every word',    file: 'say my name.mp3'           },
-  { title: 'Thinking Out Loud',               artist: 'Ed Sheeran',      note: 'People fall in love in mysterious ways',  file: 'thinking out loud.mp3'               },
-  { title: 'Lover',                 artist: 'Taylor Swift',    note: 'Soft like us',          file: 'lover.mp3'                 },
-  { title: 'Hero',artist: 'Enrique Iglesias',  note: 'I would standby you forever',        file: 'hero.mp3'},
+  { title: 'Jogi',                  artist: 'Arko ft Aakanksha Sharma',    note: 'This one says it all',                    file: 'jogi.mp3'},
+  { title: 'Say My Name',           artist: 'Hozier',                      note: 'Every note, every word',                  file: 'say my name.mp3'},
+  { title: 'Thinking Out Loud',     artist: 'Ed Sheeran',                  note: 'People fall in love in mysterious ways',  file: 'thinking out loud.mp3'},
+  { title: 'Lover',                 artist: 'Taylor Swift',                note: 'Soft like us',                            file: 'lover.mp3'},
+  { title: 'Hero',artist: 'Enrique Iglesias',                              note: 'I would standby you forever',             file: 'hero.mp3'},
 ];
 
 // player state
