@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="petal-bg" id="petals"></div>
+<div class="letter-overlay" id="letter-overlay"></div>
+
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#letter">Letter</a>
+  <a href="#books">Shelf</a>
+  <a href="#memories">Memories</a>
+  <a href="#playlist">Songs</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-hearts" id="hero-hearts"></div>
+  <p class="hero-date" id="hero-date"></p>
+  <h1>Happy Birthday,<br><em>My Love</em></h1>
+  <p class="hero-sub">Today is entirely yours &mdash; as are all my days.</p>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section id="letter">
+
+  <!-- peony watermark -->
+  <svg class="floral-bg floral-letter" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g opacity="0.05" stroke="#8b1a1a" stroke-width="1.2">
+      <path d="M150 150 C150 150 120 120 110 90 C105 75 115 60 130 65 C140 68 150 80 150 80 C150 80 160 68 170 65 C185 60 195 75 190 90 C180 120 150 150 150 150Z"/>
+      <path d="M150 150 C150 150 180 120 190 90 C195 75 185 60 170 65 C160 68 150 80 150 80 C150 80 140 68 130 65 C115 60 105 75 110 90 C120 120 150 150 150 150Z" opacity="0.5"/>
+      <circle cx="150" cy="150" r="8"/>
+      <path d="M150 142 L150 100" stroke-width="0.8"/>
+    </g>
+  </svg>
+
+  <div class="envelope-scene">
+
+    <!-- envelope -->
+    <div class="envelope" id="envelope">
+      <div class="env-body">
+        <div class="env-fold-left"></div>
+        <div class="env-fold-right"></div>
+        <span class="env-petal env-petal-tl">✿</span>
+        <span class="env-petal env-petal-br">✿</span>
+      </div>
+      <div class="letter-peek"></div>
+      <div class="env-flap">
+        <div class="env-flap-inner"></div>
+      </div>
+      <div class="env-seal" id="env-seal"><span>✿</span></div>
+      <p class="env-hint">something for you</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- letter card (modal — lives outside section so fixed positioning works) -->
+<div class="letter-card" id="letter-card">
+  <span class="letter-flower">✿</span>
+  <p class="letter-label">A letter, for you</p>
+  <div class="letter-body">
+    <p>My love,</p>
+    <p>On this day that brought you into the world, I find myself overwhelmed with gratitude &mdash; because your existence has made mine infinitely more beautiful. Every moment with you feels like a quiet miracle I didn't know I was allowed to wish for.</p>
+    <p>You make ordinary days feel sacred. You carry warmth in your laugh, depth in your eyes, and a kind of grace that makes everyone around you feel seen. I hope this birthday reminds you of how deeply you are cherished &mdash; not just today, but in every ordinary Tuesday and every long quiet evening.</p>
+    <p>Here's to you. To us. To many more years of this.</p>
+  </div>
+  <p class="letter-sig">&mdash; always &amp; entirely yours</p>
+  <p class="letter-formula">C₈H₁₁NO₂ + C₁₀H₁₂N₂O &nbsp;→&nbsp; happiness &nbsp;(you + me)</p>
+  <button class="letter-close" id="letter-close">✕ &nbsp;fold it back</button>
+</div>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- BOOKSHELF -->
+<section id="books">
+
+  <!-- botanical sprigs -->
+  <svg class="floral-bg floral-books" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g opacity="0.07" stroke="#8b1a1a" stroke-width="1">
+      <path d="M30 380 Q30 320 60 280"/><path d="M30 340 Q50 320 70 330"/><path d="M30 310 Q55 295 75 305"/>
+      <path d="M60 280 Q70 260 55 245"/><path d="M60 280 Q75 265 90 270"/>
+      <path d="M470 380 Q470 320 440 280"/><path d="M470 340 Q450 320 430 330"/><path d="M470 310 Q445 295 425 305"/>
+      <path d="M440 280 Q430 260 445 245"/><path d="M440 280 Q425 265 410 270"/>
+      <ellipse cx="55" cy="243" rx="8" ry="5" transform="rotate(-20 55 243)"/>
+      <ellipse cx="445" cy="243" rx="8" ry="5" transform="rotate(20 445 243)"/>
+    </g>
+  </svg>
+
+  <p class="section-label reveal">Her shelf</p>
+  <h2 class="section-title reveal">Books She Lives In</h2>
+  <p class="section-sub reveal">hover/tap a book to see the title</p>
+  <div class="shelf reveal" id="shelf"></div>
+  <p class="shelf-note reveal">"A reader lives a thousand lives before she dies."</p>
+</section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- MEMORIES -->
+<section id="memories">
+
+  <!-- botanical bg -->
+  <svg class="floral-bg floral-memories" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g opacity="0.07" stroke="#8b1a1a" stroke-width="1">
+      <path d="M20 100 Q40 60 60 100 Q40 140 20 100Z"/>
+      <path d="M30 80 Q50 40 70 80 Q50 120 30 80Z"/>
+      <path d="M10 120 L60 120" stroke-width="0.8"/>
+      <path d="M15 110 Q35 85 55 110"/>
+      <path d="M350 200 Q370 160 390 200 Q370 240 350 200Z"/>
+      <path d="M360 180 Q380 140 400 180 Q380 220 360 180Z"/>
+      <path d="M340 220 L390 220" stroke-width="0.8"/>
+      <path d="M20 450 Q50 400 80 450 Q50 500 20 450Z"/>
+      <path d="M10 470 Q40 430 70 470"/>
+      <path d="M330 500 Q360 450 390 500 Q360 550 330 500Z"/>
+    </g>
+  </svg>
+
+  <p class="section-label reveal">Moments we've kept</p>
+  <h2 class="section-title reveal">Our Little Memory Wall</h2>
+
+  <!-- peek swiper -->
+  <div class="swiper-wrap reveal">
+    <div class="swiper-track" id="swiper-track">
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.22);"></div>
+        <div class="mem-img">
+          <img src="chips.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">Not the packet of chips being bigger than you 😭.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.35);"></div>
+        <div class="mem-img">
+          <img src="whosthat.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">I don't even know this girl she just leaned on me but she's pretty tho.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.15);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.2) 0px,rgba(255,255,255,0.2) 3px,transparent 3px,transparent 8px);"></div>
+        <div class="mem-img">
+          <img src="curly.jpg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">However you look, to me you’ll always be the apple of my eye.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.18);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.15) 0px,rgba(255,255,255,0.15) 4px,transparent 4px,transparent 10px);"></div>
+        <div class="mem-img">
+          <img src="silly.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">My babygurl, why do you have to be this cute.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.28);background-image:repeating-linear-gradient(90deg,rgba(139,26,26,0.2) 0px,rgba(139,26,26,0.2) 3px,transparent 3px,transparent 9px);"></div>
+        <div class="mem-img">
+          <img src="penguin.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">She was a model since childhood or thats what she said.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.2);"></div>
+        <div class="mem-img">
+          <img src="close.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">The look you give that says everything without words.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.3);"></div>
+        <div class="mem-img">
+          <img src="car.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">The look you give that says everything without words.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.15);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.2) 0px,rgba(255,255,255,0.2) 3px,transparent 3px,transparent 8px);"></div>
+        <div class="mem-img">
+          <img src="shy.png" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">A moment I'll keep for as long as I live.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(139,26,26,0.15);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.2) 0px,rgba(255,255,255,0.2) 3px,transparent 3px,transparent 8px);"></div>
+        <div class="mem-img">
+          <img src="curpho.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">This kinda photos are what I cherish the most.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.25);"></div>
+        <div class="mem-img">
+          <img src="mirror.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">Us, just existing — and it being more than enough.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.28);background-image:repeating-linear-gradient(90deg,rgba(139,26,26,0.2) 0px,rgba(139,26,26,0.2) 3px,transparent 3px,transparent 9px);"></div>
+        <div class="mem-img">
+          <img src="DSC04181.png" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">She was a model since childhood or thats what she said.</p>
+      </div>
+
+      <div class="mem-card">
+        <div class="washi" style="background:rgba(196,168,74,0.3);"></div>
+        <div class="mem-img">
+          <img src="cute.jpeg" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <p class="mem-caption">The look you give that says everything without words.</p>
+      </div>
+
+    </div>
+
+    <!-- dots -->
+    <div class="swiper-dots" id="swiper-dots"></div>
+
+    <!-- arrows -->
+    <button class="swiper-arrow swiper-prev" id="swiper-prev" aria-label="Previous">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--crimson)" stroke-width="1.5" stroke-linecap="round"><path d="M10 3L5 8l5 5"/></svg>
+    </button>
+    <button class="swiper-arrow swiper-next" id="swiper-next" aria-label="Next">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--crimson)" stroke-width="1.5" stroke-linecap="round"><path d="M6 3l5 5-5 5"/></svg>
+    </button>
+  </div>
+
+  <p class="swiper-hint">← swipe or use arrows →</p>
+</section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- PLAYLIST -->
+<section id="playlist">
+
+  <!-- fallen petals bg -->
+  <svg class="floral-bg floral-playlist" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g opacity="0.07" stroke="#8b1a1a" stroke-width="1" fill="#8b1a1a" fill-opacity="0.3">
+      <ellipse cx="60"  cy="80"  rx="12" ry="7" transform="rotate(30 60 80)"/>
+      <ellipse cx="420" cy="120" rx="10" ry="6" transform="rotate(-20 420 120)"/>
+      <ellipse cx="30"  cy="300" rx="9"  ry="5" transform="rotate(50 30 300)"/>
+      <ellipse cx="460" cy="350" rx="11" ry="6" transform="rotate(-40 460 350)"/>
+      <ellipse cx="100" cy="440" rx="8"  ry="5" transform="rotate(15 100 440)"/>
+      <ellipse cx="390" cy="460" rx="10" ry="6" transform="rotate(-25 390 460)"/>
+      <ellipse cx="240" cy="50"  rx="7"  ry="4" transform="rotate(60 240 50)"/>
+      <ellipse cx="200" cy="480" rx="9"  ry="5" transform="rotate(-10 200 480)"/>
+    </g>
+  </svg>
+
+  <p class="section-label reveal">Songs that feel like us</p>
+  <h2 class="section-title reveal">Our Playlist</h2>
+  <div class="playlist-wrap reveal">
+
+    <!-- now playing -->
+    <div class="now-playing-bar">
+      <div class="np-label">
+        <div class="bars" id="np-bars">
+          <span style="height:6px"></span>
+          <span style="height:12px"></span>
+          <span style="height:4px"></span>
+          <span style="height:10px"></span>
+        </div>
+        Now playing
+      </div>
+      <div class="np-title" id="np-title">—</div>
+      <div class="np-artist" id="np-artist"></div>
+      <div class="progress-wrap">
+        <span class="time-label" id="time-current">0:00</span>
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="time-label right" id="time-duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- controls -->
+    <div class="controls">
+      <button class="ctrl-btn" id="prev-btn" aria-label="Previous">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="var(--crimson)" stroke-width="1.4" stroke-linecap="round">
+          <path d="M10 2L4 7l6 5V2z"/><line x1="2" y1="2" x2="2" y2="12"/>
+        </svg>
+      </button>
+      <button class="ctrl-btn play-btn" id="play-btn" aria-label="Play/Pause">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14" fill="white"><path d="M3 2l9 5-9 5z"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14" fill="white"><rect x="2" y="2" width="4" height="10"/><rect x="8" y="2" width="4" height="10"/></svg>
+      </button>
+      <button class="ctrl-btn" id="next-btn" aria-label="Next">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="var(--crimson)" stroke-width="1.4" stroke-linecap="round">
+          <path d="M4 2l6 5-6 5V2z"/><line x1="12" y1="2" x2="12" y2="12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- track list -->
+    <div id="tracks"></div>
+
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-icons">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b1a1a" stroke-width="1.2">
+      <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+    </svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b1a1a" stroke-width="1.2">
+      <path d="M12 20 C12 20 3 14 3 8 C3 5.5 5 4 7 4 C8.5 4 12 6 12 6 C12 6 15.5 4 17 4 C19 4 21 5.5 21 8 C21 14 12 20 12 20Z"/>
+    </svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b1a1a" stroke-width="1.2">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg>
+  </div>
+  <span class="footer-heart">&#9829;</span>
+  <p>Made with love, for the one who deserves the whole world.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
